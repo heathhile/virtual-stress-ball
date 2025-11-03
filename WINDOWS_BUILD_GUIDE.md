@@ -4,15 +4,27 @@ This guide will help you create a standalone Windows executable that runs withou
 
 ## Quick Start (Easiest Method)
 
-1. **Install Python** (if not already installed)
+1. **Get the Code**
+   - Download the repository as ZIP from GitHub: https://github.com/heathhile/virtual-stress-ball
+   - Click the green "Code" button → "Download ZIP"
+   - Extract the ZIP file to a folder
+
+   OR if you have Git installed:
+   ```cmd
+   git clone https://github.com/heathhile/virtual-stress-ball.git
+   cd virtual-stress-ball
+   ```
+
+2. **Install Python** (if not already installed)
    - Download from https://www.python.org/downloads/
    - During installation, check "Add Python to PATH"
 
-2. **Build the Executable**
+3. **Build the Executable**
+   - Open the `virtual-stress-ball` folder you downloaded/cloned
    - Double-click `build_windows.bat`
    - Wait for the build process to complete (1-2 minutes)
 
-3. **Done!**
+4. **Done!**
    - Find `VirtualStressBall.exe` in the `dist/` folder
    - Copy this file anywhere you want
    - Share it with friends - no Python needed to run it!
