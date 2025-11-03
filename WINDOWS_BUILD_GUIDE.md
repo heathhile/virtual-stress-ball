@@ -50,10 +50,16 @@ You can share `VirtualStressBall.exe` with anyone who has Windows:
 - Reinstall Python and check "Add Python to PATH" during installation
 - Or open Command Prompt as Administrator and run: `setx PATH "%PATH%;C:\Python3x"` (replace with your Python path)
 
+### "pyinstaller is not recognized as a command"
+- This is a common Windows PATH issue
+- The build script has been updated to fix this automatically
+- If you still see this error, run manually: `python -m PyInstaller --clean stress_ball.spec`
+
 ### Build fails
 - Make sure you have internet connection (needed to download PyInstaller)
 - Try running Command Prompt as Administrator
-- Manually install PyInstaller: `pip install pyinstaller`
+- Manually install PyInstaller: `python -m pip install pyinstaller`
+- Then build with: `python -m PyInstaller --clean stress_ball.spec`
 
 ### Antivirus flags the .exe
 - This is normal for PyInstaller executables
@@ -66,13 +72,13 @@ If you prefer manual control:
 
 ```cmd
 REM Install PyInstaller
-pip install pyinstaller
+python -m pip install pyinstaller
 
 REM Clean previous builds
 rmdir /s /q build dist
 
 REM Build executable
-pyinstaller --clean stress_ball.spec
+python -m PyInstaller --clean stress_ball.spec
 
 REM Your .exe is now in dist/VirtualStressBall.exe
 ```

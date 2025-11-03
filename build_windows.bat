@@ -14,7 +14,7 @@ if errorlevel 1 (
 )
 
 echo [1/4] Installing PyInstaller...
-pip install pyinstaller
+python -m pip install pyinstaller
 if errorlevel 1 (
     echo ERROR: Failed to install PyInstaller
     pause
@@ -28,7 +28,7 @@ if exist dist rmdir /s /q dist
 
 echo.
 echo [3/4] Building Windows executable...
-pyinstaller --clean stress_ball.spec
+python -m PyInstaller --clean stress_ball.spec
 if errorlevel 1 (
     echo ERROR: Build failed!
     pause
